@@ -1555,7 +1555,7 @@ duk_bool_t duk__declvar_helper(duk_hthread *thr,
                                duk_hstring *name,
                                duk_tval *val,
                                duk_small_int_t prop_flags,
-                               duk_bool_t is_func_decl) {
+                               duk_uint_t is_func_decl) {
 	duk_context *ctx = (duk_context *) thr;
 	duk_hobject *holder;
 	duk_bool_t parents;
@@ -1566,7 +1566,7 @@ duk_bool_t duk__declvar_helper(duk_hthread *thr,
 	                     "(env -> %!iO)",
 	                     (void *) thr, (void *) env, (duk_heaphdr *) name,
 	                     (duk_tval *) val, (unsigned long) prop_flags,
-	                     (unsigned int) is_func_decl, (duk_heaphdr *) env));
+	                     (long) is_func_decl, (duk_heaphdr *) env));
 
 	DUK_ASSERT(thr != NULL);
 	DUK_ASSERT(env != NULL);
@@ -1787,7 +1787,7 @@ duk_bool_t duk_js_declvar_activation(duk_hthread *thr,
                                      duk_hstring *name,
                                      duk_tval *val,
                                      duk_small_int_t prop_flags,
-                                     duk_bool_t is_func_decl) {
+                                     duk_uint_t is_func_decl) {
 	duk_hobject *env;
 	duk_tval tv_val_copy;
 
