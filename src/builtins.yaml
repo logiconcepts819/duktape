@@ -61,6 +61,13 @@
 #    - Pointer:
 #      - type: pointer
 #      - NOTE: not supported yet, type is reserved
+#    - Lightfunc:
+#      - type: lightfunc
+#      - native: native function name
+#      - magic: -128 to 127
+#      - length: 0 to 15
+#      - nargs: 0 to 14; or varargs: true
+#      - varargs: if true, target has variable arguments
 #    - Reference to a built-in object:
 #      - type: object
 #        id: ID string of target object
