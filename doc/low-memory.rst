@@ -347,7 +347,9 @@ The following may be appropriate when even less memory is available
   - Rerun ``make_dist.py`` with ``--rom-support`` to create a distributable
     with support for ROM builtins.  ROM builtin support is not enabled by
     default because it increases the size of ``duktape.c`` considerably.
-    (See ``util/example_rombuild.sh`` for some very simple examples.)
+    Add the option ``--rom-auto-lightfunc`` to convert built-in function
+    properties into lightfuncs to reduce ROM footprint.  (See
+    ``util/example_rombuild.sh`` for some very simple examples.)
 
   - Moving built-ins into ROM makes them read-only which has some side
     effects.  Some side effects are technical compliance issues while
