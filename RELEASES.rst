@@ -1701,6 +1701,10 @@ Planned
   related changes; instead, an artificial property "length" is available via
   GetHeapObjInfo (GH-703, GH-856)
 
+* Add support for converting ROM function property values into lightfunc in
+  genbuiltins.py to reduce code footprint for ROM-based built-ins and custom
+  bindings; footprint reduction is around 14-15kB on 32-bit targets (GH-872)
+
 * Allow ES6 unescaped right bracket (']') in regular expressions (non-standard
   before ES6 Annex B), left bracket ('[') not yet supported because it needs
   backtracking (GH-871)
